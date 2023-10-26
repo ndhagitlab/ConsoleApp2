@@ -4,6 +4,12 @@ provider "vsphere" {
   vsphere_server = "vcenter.example.com"
 }
 
+provider "vsphere1" {
+  user     = "your-username"
+  password = "your-password"
+  vsphere_server = "vcenter.example.com"
+}
+
 resource "vsphere_virtual_machine" "vm" {
   name             = "vmname"
   resource_pool_id = "resgroup-12345"
