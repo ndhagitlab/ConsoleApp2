@@ -1,4 +1,10 @@
 provider "vsphere" {
+  user     = "vcbs-username"
+  password = "vcbs-password"
+  vsphere_server = "vcenter.example.com"
+}
+
+provider "vsphere" {
   user     = "your-username"
   password = "your-password"
   vsphere_server = "vcenter.example.com"
