@@ -8,18 +8,19 @@ namespace Proc_server
 {
     public class Server
     {
-        public string svr_name { get; set; }
-        public string svr_ipaddress { get; set; }
-        public string svr_type { get; set; }
-        //public Server(string svr_name, string svr_ipaddress, string svr_type)
-        //{
-        //    this.svr_name = svr_name;
-        //    this.svr_ipaddress = svr_ipaddress;
-        //    this.svr_type = svr_type;
-        //}
-        public void myserver()
+        public string Svr_name { get; set; } = string.Empty;
+        public string Svr_ipaddress { get; set; } = string.Empty;
+        public string Svr_type { get; set; }
+        public Server(string svrname, string svripaddress, string svrtype)
         {
-            Console.WriteLine("VCBS: " + svr_name + " - IP address :" + svr_ipaddress + " - Type Server :" + svr_type);
+            Svr_name = svrname;
+            Svr_ipaddress = svripaddress;
+            Svr_type = svrtype;
+        }
+        public Server() : this("DELL", "192.168.1.1","R650") { }
+        public void Myserver()
+        {
+            Console.WriteLine("VCBS: " + Svr_name + " - IP address :" + Svr_ipaddress + " - Type Server :" + Svr_type);
         }
     }
 }
